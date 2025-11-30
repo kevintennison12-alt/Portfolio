@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kevin Tennison | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background:white;
+    color:#222;
+}
+
+/* ==================== NAVBAR ==================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:15px;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    border-bottom:1px solid #ddd;
+}
+nav a{
+    color:#0077ff;
+    margin:0 22px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+nav a:hover{
+    text-shadow:0 0 10px #0ef;
+    transform:scale(1.1);
+}
+
+/* ==================== HERO ==================== */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: linear-gradient(135deg, #e8f7ff 0%, #ffffff 100%);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Floating animation */
+@keyframes floatUp {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero h1{
+    font-size:65px;
+    font-weight:700;
+    color:#0a0a0a;
+    text-shadow:0 0 10px #00c3ff;
+    animation: floatUp 4s infinite ease-in-out;
+}
+.hero p{
+    margin-top:15px;
+    font-size:22px;
+    opacity:0.85;
+    animation: floatUp 5s infinite ease-in-out;
+    color:#333;
+}
+
+.glow-btn{
+    margin-top:30px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:#00c3ff;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+    box-shadow:0 0 20px #00c3ff;
+}
+.glow-btn:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 40px #00c3ff;
+}
+
+/* ==================== SECTIONS ==================== */
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    font-size:42px;
+    margin-bottom:35px;
+    color:#0077ff;
+    text-shadow:0 0 10px #cce7ff;
+}
+
+/* ==================== PROJECT CARD ==================== */
+
+.project-card{
+    background:rgba(0,0,0,0.03);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(0,0,0,0.1);
+    margin-bottom:25px;
+    transition:0.4s;
+}
+.project-card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 0 20px #a8dfff;
+}
+
+/* ==================== SKILLS ==================== */
+
+.skills-box{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+.skills-box span{
+    background:#00c3ff;
+    color:white;
+    padding:12px 22px;
+    border-radius:35px;
+    font-weight:600;
+    font-size:17px;
+    box-shadow:0 0 15px #9edfff;
+    transition:0.3s;
+}
+.skills-box span:hover{
+    transform:scale(1.25);
+}
+
+/* ==================== EVENTS ==================== */
+
+.event-card{
+    padding:20px;
+    background:rgba(0,0,0,0.03);
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+.event-card:hover{
+    transform:translateX(12px);
+    box-shadow:0 0 20px #d2ecff;
+}
+
+/* ==================== CONTACT ==================== */
+
+.contact p{
+    font-size:22px;
+    margin-bottom:10px;
+    color:#111;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#f1f1f1;
+    margin-top:50px;
+    color:#555;
+    border-top:1px solid #ddd;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+    .hero h1{font-size:40px;}
+    nav a{margin:0 10px; font-size:15px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav data-aos="fade-down">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1 data-aos="zoom-in" data-aos-duration="1200">Kevin Tennison</h1>
+    <p data-aos="fade-up" data-aos-duration="1400">• Tech Explorer • Instrumentalist</p>
+    <button class="glow-btn" data-aos="fade-up" data-aos-duration="1600"
+            onclick="location.href='#projects'">
+        Explore My Work
+    </button>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 data-aos="fade-right">About Me</h2>
+    <p data-aos="fade-up" data-aos-duration="1200">
+        I'm a Computer Science & Design student passionate about building intelligent,
+        modern, and visually appealing software experiences.
+        I specialize in automation tools, and high-quality UI development.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 data-aos="fade-left">Projects</h2>
+
+    <div class="project-card" data-aos="fade-up">
+        <h3>Smart Feedback Classifier (NLP + ML)</h3>
+        <p>TF-IDF + Logistic Regression classifier integrated with Airtable + Chart.js dashboards.</p>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+        <h3>College Database Management System</h3>
+        <p>DBMS system to manage students, faculty, and exams using phpMyAdmin.</p>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+        <h3>Student Resource Hub (Hackathon)</h3>
+        <p>HTML/CSS platform with uploads, downloads, and an integrated AI chatbot.</p>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+        <h3>CyberCafe Management System</h3>
+        <p>Java-based session & user management tool.</p>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+        <h3>Internet Connectivity Checker</h3>
+        <p>Python-based real-time ping monitoring tool.</p>
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 data-aos="zoom-in">Skills</h2>
+    <div class="skills-box">
+        <span data-aos="zoom-in">C</span>
+        <span data-aos="zoom-in">C++</span>
+        <span data-aos="zoom-in">Java</span>
+        <span data-aos="zoom-in">Python</span>
+        <span data-aos="zoom-in">SQL</span>
+        <span data-aos="zoom-in">HTML</span>
+        <span data-aos="zoom-in">Bootstrap</span>
+        <span data-aos="zoom-in">VS Code</span>
+    </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+    <h2 data-aos="fade-right">Events & Achievements</h2>
+
+    <div class="event-card" data-aos="fade-left">
+        <h3>Hackathons</h3>
+        <p>MCE Hassan – 6 hour Hackathon</p>
+        <p>JNNCE Sigma 2024</p>
+    </div>
+
+    <div class="event-card" data-aos="fade-left">
+        <h3>Industrial Visits</h3>
+        <p>BOSCH Vocational Center, Bengaluru</p>
+        <p>SERC – IISc Bangalore</p>
+    </div>
+
+    <div class="event-card" data-aos="fade-left">
+        <h3>VTU Youth Fest</h3>
+        <p>BLISSBEAT 2024 – SJCIT</p>
+        <p>INTERACT 2025 – GAT Bengaluru</p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2 data-aos="zoom-in">Contact</h2>
+    <p>Email: <b>kevintennison1@gmail.com</b></p>
+    <p>Phone: <b>7795165775</b></p>
+    <p>Location: Shivamogga, Karnataka</p>
+</section>
+
+<footer>
+    © 2025 Kevin Tennison — All Rights Reserved
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+      duration: 1100,
+      once: false
+  });
+</script>
+
+</body>
+</html>
